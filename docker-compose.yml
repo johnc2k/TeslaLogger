@@ -19,7 +19,7 @@ services:
       - 5010:5000
 
   database:
-    image: mariadb:10.4.7
+    image: linuxserver/mariadb:10.5.15
     restart: always
     env_file:
       - .env
