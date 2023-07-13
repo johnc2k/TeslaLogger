@@ -14,7 +14,7 @@ services:
     depends_on:
       - database
     environment:
-      - TZ=Europe/Berlin
+      - TZ=Europe/London
     ports:
       - 5010:5000
 
@@ -29,7 +29,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      - TZ=Europe/Berlin
+      - TZ=Europe/London
 
   grafana:
     image: grafana/grafana:10.0.1
@@ -37,7 +37,7 @@ services:
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=teslalogger
       - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=natel-discrete-panel,pr0ps-trackmap-panel,teslalogger-timeline-panel
-      - TZ=Europe/Berlin
+      - TZ=Europe/London
     ports:
       - 3000:3000
     volumes:
@@ -63,7 +63,7 @@ services:
     ports:
       - 8888:80
     environment:
-      - TZ=Europe/Berlin
+      - TZ=Europe/London
 
 volumes:
     teslalogger-tmp:
