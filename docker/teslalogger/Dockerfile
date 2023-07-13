@@ -1,7 +1,7 @@
 FROM mono:6.12.0.122
 
 # timezone / date
-RUN echo "Europe/Berlin" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
+RUN echo "Europe/London" > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata
 
 # install packages
 RUN apt-get update && \
